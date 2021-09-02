@@ -1,3 +1,3 @@
-# 📇 Business Cards
+# Web Directions Code Badge Generator
 
-See my [business card](https://tomayac.github.io/business-cards/).
+Create my [conference badge](https://tomayac.github.io/web-directions-code/).
