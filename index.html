@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="./avatar.png" />
+    <title>Hello, my name is…</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="./manifest.json" />
+    <script>
+      if (!isSecureContext) {
+        location.protocol = 'https:';
+      }
+    </script>
+    <script src="./script.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <section class="lanyard">
+          <div class="lanyard-left"></div>
+          <div class="lanyard-right"></div>
+        </section>
+        <section class="card card_outer">
+          <div class="card_inner">
+            <div class="card_details-company">
+              <h2>
+                <span class="name" contenteditable>Thomas Steiner</span>
+              </h2>
+            </div>
+
+            <div class="card_details-name">
+              <h3 class="role" contenteditable>
+                Developer Relations Engineer at Google
+              </h3>
+            </div>
+            <p>
+              <img
+                src="./avatar.png"
+                width="512"
+                height="512"
+                class="avatar"
+                hidden
+              />
+              <button hidden type="button" class="copy-avatar">Copy</button>
+            </p>
+            <div class="card_details-location">
+              <p>
+                <a
+                  contenteditable
+                  href="https://twitter.com/tomayac"
+                  class="twitter-link"
+                  >@tomayac</a
+                >
+                <button hidden type="button" class="copy-twitter">Copy</button>
+              </p>
+            </div>
+          </div>
+          <div class="logo"></div>
+        </section>
+      </section>
+    </main>
+    <div class="actions">
+      <button hidden type="button" class="save-card">Save Badge to File</button>
+      <button hidden type="button" class="store-card">
+        Store Badge in Browser
+      </button>
+      <button type="button" class="reset-card">Reset Badge</button>
+    </div>
+    <table hidden>
+      <thead>
+        <tr>
+          <th>File Name</th>
+          <th>File Length</th>
+          <th>File Actions</th>          
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <footer hidden>
+      Click the image to change the avatar, or just paste or drop an image onto
+      the page. Badge design based on
+      <a href="https://codepen.io/keefyboooo/pen/jbqBKY">Keith Light</a>'s
+      CodePen.
+    </footer>
+  </body>
+</html>
