@@ -71,4 +71,8 @@ if ('storageFoundation' in window) {
   import('./storage.js');
 }
 
+if ('NDEFReader' in window) {
+  import('./nfc.js');
+}
+
 export { blobToDataURL };
