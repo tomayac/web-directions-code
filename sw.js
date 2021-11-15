@@ -16,11 +16,15 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     (async () => {
-      const response = await event.preloadResponse;
-      if (response) {
-        return response;
+      try {
+        const response = await event.preloadResponse;
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      } catch {
+        return new Response('Offline');
       }
-      return fetch(event.request).catch(() => new Response('Offline'));
     })(),
   );
 });
